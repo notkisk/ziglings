@@ -24,7 +24,7 @@ pub fn main() void {
     const foo = 42;
 
     // Please fix this condition:
-    if (foo) {
+    if (foo == 42) {
         // We want our program to print this message!
         std.debug.print("Foo is 42!\n", .{});
     } else {

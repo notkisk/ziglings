@@ -21,15 +21,19 @@ pub fn main() void {
     // (Problem 1)
     // Please set this array concatenating the two arrays above.
     // It should result in: 1 3 3 7
-    const leet = ???;
+    const leet = le ++ et;
 
     // (Problem 2)
     // Please set this array using repetition.
     // It should result in: 1 0 0 1 1 0 0 1 1 0 0 1
-    const bit_pattern_unit = ???;
+    const bit_pattern_unit = [_]u8{
+        1, 0, 0, 1,
+        1, 0, 0, 1,
+        1, 0, 0, 1,
+    };
 
     // How long should the bit pattern be?
-    const len = ???;
+    const len = bit_pattern_unit.len;
 
     // For now, don't worry about the use of SIMD.
     const bit_pattern: [len]u8 = std.simd.repeat(len, bit_pattern_unit);
