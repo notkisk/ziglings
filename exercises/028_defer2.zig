@@ -20,7 +20,7 @@ pub fn main() void {
 fn printAnimal(animal: u8) void {
     std.debug.print("(", .{});
 
-    std.debug.print(") ", .{}); // <---- how?!
+    defer std.debug.print(") ", .{}); // <---- how?!
 
     if (animal == 'g') {
         std.debug.print("Goat", .{});
@@ -51,9 +51,9 @@ fn calculateTheUltimateQuestionOfLife() u32 {
 
     // Try reordering the statements to get the answer 42
     {
-        defer x = x / 10;
-        defer x = x + 11;
         defer x = x * 2;
+        defer x = x + 11;
+        defer x = x / 10;
     }
 
     return x;

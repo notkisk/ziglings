@@ -12,6 +12,7 @@
 //
 
 const std = @import("std");
+const foo = @import("foo");
 
 pub fn main() void {
     std.debug.print("Standard Library.\n", .{});
