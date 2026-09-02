@@ -14,7 +14,7 @@ pub fn main(init: std.process.Init) !void {
     var stdout_writer = std.Io.File.stdout().writer(io, &.{});
     const stdout = &stdout_writer.interface;
 
-    const my_num: u32 = getNumber();
+    const my_num: u32 =try getNumber();
 
     try stdout.print("my_num={}\n", .{my_num});
 }
